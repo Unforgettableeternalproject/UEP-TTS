@@ -1,0 +1,21 @@
+# OuteTTS 核心套件（包含 llama.cpp bindings）
+outetts>=0.4.0
+
+# Hugging Face Transformers / Datasets / TRL
+transformers>=4.30.0
+datasets>=2.14.0
+trl>=0.6.0
+
+# PEFT for LoRA adapter
+peft>=0.5.0
+
+# PyTorch
+torch>=2.0.0
+
+# （選擇性）音訊處理
+soundfile
+torchaudio
+
+# 其他輔助
+pydantic
+typing_extensions

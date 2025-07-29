@@ -1,0 +1,163 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Audio Files
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+*.wma
+*.aac
+
+# Model Files and Checkpoints
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.pb
+*.onnx
+*.tflite
+
+# Training Outputs
+outputs/
+checkpoints/
+runs/
+logs/
+tensorboard_logs/
+
+# Dataset and Data Files
+data/wavs/
+data/audio/
+*.tar
+*.gz
+*.zip
+*.7z
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+bin/
+obj/
+*.cache
+*.ilk
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp_proj
+*.vspscc
+*.vssscc
+.builds/
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Cache
+.cache/
+*.cache
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Large Files (Git LFS should handle these)
+*.large
+
+# HuggingFace Cache
+.cache/huggingface/
+
+# Training Specific
+wandb/
+mlruns/
+
+# Generated Audio Samples
+generation/output*.wav
+generation/samples/
+**/samples/
+
+# Model Downloads
+downloads/
+pretrained/
+
+# Configuration backups
+*.bak
+*.backup
+
+# System Files
+*.log
+*.out
+*.err
