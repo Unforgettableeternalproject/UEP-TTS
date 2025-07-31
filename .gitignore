@@ -99,6 +99,12 @@ obj/
 *.svclog
 *.scc
 
+# Visual Studio Project Files (uncomment if you don't want to track them)
+# *.sln
+# *.pyproj
+# *.vcxproj
+# *.vcxproj.filters
+
 # Visual Studio Code
 .vscode/
 *.code-workspace

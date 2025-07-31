@@ -18,8 +18,8 @@ interface = outetts.Interface(
 )
 
 # 建立 speaker profile（只需大約 10 秒左右的參考音檔）
-speaker = interface.create_speaker("../data/uep_reference.wav")
-interface.save_speaker(speaker, "../speaker/uep_speaker.json")
+speaker = interface.create_speaker("../data/my_reference.mp3")
+interface.save_speaker(speaker, "../speaker/bernie_speaker.json")
 
 # 或者之後重用：
 # speaker = interface.load_speaker("../speaker/uep_speaker.json")

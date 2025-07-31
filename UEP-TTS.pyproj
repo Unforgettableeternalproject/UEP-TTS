@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>UEP-TTS</Name>
     <RootNamespace>UEP-TTS</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,51 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="generation\example.py" />
+    <Compile Include="src\evaluate_audio.py" />
+    <Compile Include="src\generate_preview.py" />
+    <Compile Include="src\prepare_data.py" />
+    <Compile Include="src\train_outetts.py" />
     <Compile Include="UEP_TTS.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\wavs\" />
+    <Folder Include="models\" />
+    <Folder Include="models\Llama-OuteTTS-1.0-1B\" />
+    <Folder Include="generation\" />
+    <Folder Include="outputs\" />
+    <Folder Include="outputs\checkpoints\" />
+    <Folder Include="outputs\samples\" />
+    <Folder Include="training_configs\" />
+    <Folder Include="src\" />
+    <Folder Include="speaker\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\dataset.json" />
+    <Content Include="data\metadata.csv" />
+    <Content Include="models\Llama-OuteTTS-1.0-1B\config.json" />
+    <Content Include="models\Llama-OuteTTS-1.0-1B\generation_config.json" />
+    <Content Include="models\Llama-OuteTTS-1.0-1B\model.safetensors" />
+    <Content Include="models\Llama-OuteTTS-1.0-1B\special_tokens_map.json" />
+    <Content Include="models\Llama-OuteTTS-1.0-1B\tokenizer.json" />
+    <Content Include="models\Llama-OuteTTS-1.0-1B\tokenizer_config.json" />
+    <Content Include="outputs\samples\output.wav" />
+    <Content Include="requirements.txt" />
+    <Content Include="speaker\uep_speaker.json" />
+    <Content Include="training_configs\config_lora.json" />
+    <Content Include="training_configs\config_sft.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.10</Version>
+      <Description>env (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
